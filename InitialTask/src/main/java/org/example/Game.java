@@ -1,6 +1,8 @@
 package org.example;
+
 import java.util.*;
 import java.lang.*;
+
 public class Game {
 
     private final int[] secretNumber;
