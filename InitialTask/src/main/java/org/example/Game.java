@@ -2,11 +2,16 @@ package org.example;
 import java.util.*;
 import java.lang.*;
 public class Game {
+
     private final int[] secretNumber;
     private final Scanner in = new Scanner(System.in);
 
     public Game() {
         this.secretNumber = CreateSecretNumber();
+    }
+
+    public Game(int[] setSecretNumber){             //Special fot tests
+        this.secretNumber = setSecretNumber;
     }
 
     public void Gameplay() {
@@ -16,6 +21,16 @@ public class Game {
             String num = in.next();
             if (CorrectNumber(num)) {
                 attempts++;
+
+                Map<String, Integer> Animals = new HashMap<>();
+                Animals = NumberAnimals(num);
+
+                System.out.println(attempts + " attempt result: " + Animals.get("cows") + " cows and " + Animals.get("bulls") + " bulls");
+
+                if (Animals.get("bulls") == num.length()) {
+                    System.out.println("Congratulations!!! You passed it on the " + attempts + "th attempt!");
+                    break;
+                }
 
                 if (attempts % 10 == 0) {
                     System.out.println("Friend, aren't you tired? Yes or No");
@@ -32,15 +47,6 @@ public class Game {
                     }
                 }
 
-                Map<String, Integer> Animals = new HashMap<>();
-                Animals = NumberAnimals(num);
-
-                System.out.println(attempts + " attempt result: " + Animals.get("cows") + " cows and " + Animals.get("bulls") + " bulls");
-
-                if (Animals.get("bulls") == num.length()) {
-                    System.out.println("Congratulations!!! You passed it on the " + attempts + "th attempt!");
-                    break;
-                }
             } else {
                 System.out.println("Incorrect number entered, please try again");
             }
@@ -48,11 +54,11 @@ public class Game {
         }
     }
 
-    private boolean CorrectNumber(String num) {
+    boolean CorrectNumber(String num) {
         return num.length() == 4 && num.matches("\\d{4}") && UniqueNumbers(num);
     }
 
-    private boolean UniqueNumbers(String num) {
+    boolean UniqueNumbers(String num) {
         HashSet CountUnuqueNum = new HashSet();
         for (char c : num.toCharArray()) {
             if (c >= '0' && c <= '9') {
@@ -76,7 +82,7 @@ public class Game {
         return localSecretNum;
     }
 
-    private Map<String, Integer> NumberAnimals(String num) {
+    Map<String, Integer> NumberAnimals(String num) {
         int[] intEnteredNum = convertStringToInt(num);
         Map<String, Integer> Animals = new HashMap<>();
         Animals.put("cows", 0);
@@ -114,4 +120,5 @@ public class Game {
         }
         return arr;
     }
+
 }
