@@ -16,7 +16,8 @@ public class CommandFactoryClass {
         try {
             String className = commandMap.get(commandName);
             if (className != null){
-                Class<?> commandClass = Class.forName(className);
+                ClassLoader classLoader = getClass().getClassLoader();
+                Class<?> commandClass = classLoader.loadClass(className);
 
                 if (ParameterizedCommand.class.isAssignableFrom(commandClass)) {
                     ParameterizedCommand parameterizedCommand = (ParameterizedCommand) commandClass.getDeclaredConstructor().newInstance();
