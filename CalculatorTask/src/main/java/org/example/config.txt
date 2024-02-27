@@ -1,0 +1,9 @@
+PUSH=org.example.PushCommand
+POP=org.example.PopCommand
+ADD=org.example.AddCommand
+SUBTRACT=org.example.SubtractCommand
+MULTIPLY=org.example.MultiplyCommand
+DIVIDE=org.example.DivideCommand
+SQRT=org.example.SqrtCommand
+PRINT=org.example.PrintCommand
+DEFINE=org.example.DefineCommand

@@ -1,10 +1,11 @@
 package org.example;
 
+import java.util.Map;
 import java.util.Stack;
 
 public class SubtractCommand implements Command {
     @Override
-    public void execute(Stack<Double> stack) {
+    public void execute(Stack<Double> stack, Map<String, Double> parameters) {
         if (stack.size() >= 2) {
             double operand2 = stack.pop();
             double operand1 = stack.pop();
