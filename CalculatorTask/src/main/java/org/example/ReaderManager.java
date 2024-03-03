@@ -5,20 +5,23 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class ReaderManager {
+class ReaderManager implements AutoCloseable {
+
+    private BufferedReader reader;
+
     public BufferedReader createReader(String[] args) throws IOException {
         if (args.length > 0) {
-            return new BufferedReader(new FileReader(args[0]));
+            reader = new BufferedReader(new FileReader(args[0]));
         } else {
-            return new BufferedReader(new InputStreamReader(System.in));
+            reader = new BufferedReader(new InputStreamReader(System.in));
         }
+        return reader;
     }
 
-    public void closeReader(BufferedReader reader) {
-        try {
+    @Override
+    public void close() throws Exception {
+        if (reader != null) {
             reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }

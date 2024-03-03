@@ -51,7 +51,7 @@ public class CalculatorTest {
             InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
             Stack<Double> stack = new Stack<>();
             Map<String, Double> parameters = new HashMap<>();
-            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)), new CommandFactoryClass("src/main/java/org/example/config.txt"), stack, parameters);
+            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)), new CommandFactoryClass("src/main/java/org/example/config.properties"), stack, parameters);
 
             if (!stack.isEmpty()) {
                 assertEquals(expectedResult, stack.pop());
@@ -70,7 +70,7 @@ public class CalculatorTest {
             System.setOut(new PrintStream(outContent));
             Stack<Double> stack = new Stack<>();
             Map<String, Double> parameters = new HashMap<>();
-            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)), new CommandFactoryClass("src/main/java/org/example/config.txt"), stack, parameters);
+            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)), new CommandFactoryClass("src/main/java/org/example/config.properties"), stack, parameters);
 
             assertEquals(expectedOutput, outContent.toString().trim());
         } catch (IOException e) {

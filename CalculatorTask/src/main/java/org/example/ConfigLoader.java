@@ -1,20 +1,21 @@
 package org.example;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Properties;
 
 public class ConfigLoader {
 
     public static void loadConfig(String configFile, Map<String, String> commandMap) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(configFile))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] tokens = line.split("=");
-                if (tokens.length == 2) {
-                    commandMap.put(tokens[0], tokens[1]);
-                }
+        Properties properties = new Properties();
+
+        try (FileReader reader = new FileReader(configFile)) {
+            properties.load(reader);
+
+            for (String key : properties.stringPropertyNames()) {
+                String value = properties.getProperty(key);
+                commandMap.put(key, value);
             }
         } catch (IOException e) {
             e.printStackTrace();

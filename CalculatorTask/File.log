@@ -1,3 +1,9 @@
-2024-03-03 13:22:29,996 INFO o.e.Calculator [main] Processing command: sdfg
-2024-03-03 13:22:30,001 DEBUG o.e.Calculator [main] Stack: []
-2024-03-03 13:22:30,001 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-04 00:58:47,458 INFO o.e.Calculator [main] Processing command: PUSH 5
+2024-03-04 00:58:47,462 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-04 00:58:47,462 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-04 00:58:49,415 INFO o.e.Calculator [main] Processing command: SQRT
+2024-03-04 00:58:49,418 DEBUG o.e.Calculator [main] Stack: [2.23606797749979]
+2024-03-04 00:58:49,418 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-04 00:58:52,482 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-04 00:58:52,485 DEBUG o.e.Calculator [main] Stack: [2.23606797749979]
+2024-03-04 00:58:52,485 DEBUG o.e.Calculator [main] Parameters: {}
