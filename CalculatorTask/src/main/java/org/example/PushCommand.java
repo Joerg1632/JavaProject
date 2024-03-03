@@ -16,7 +16,7 @@ public class PushCommand implements ParameterizedCommand {
 
     @Override
     public void execute(Stack<Double> stack, Map<String, Double> parameters) {
-        if (paramValue.matches("-?\\d+(\\.\\d+)?")) {
+        if (paramValue.matches("-?\\d+(\\.\\d+)?")) {  //if number
             stack.push(Double.parseDouble(paramValue));
         } else if (parameters.containsKey(paramValue)) {
             double variableValue = parameters.get(paramValue);

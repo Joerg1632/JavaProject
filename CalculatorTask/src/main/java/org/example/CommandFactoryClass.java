@@ -7,7 +7,7 @@ public class CommandFactoryClass {
 
     public CommandFactoryClass(String configFile) {
         commandMap = new HashMap<>();
-        ConfigLoader.loadConfig(configFile, commandMap); // Load classes
+        ConfigLoader.loadConfig(configFile, commandMap); // Load classes from file
     }
 
     public Command createCommand(String line) {

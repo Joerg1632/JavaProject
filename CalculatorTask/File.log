@@ -1,0 +1,3 @@
+2024-03-03 13:22:29,996 INFO o.e.Calculator [main] Processing command: sdfg
+2024-03-03 13:22:30,001 DEBUG o.e.Calculator [main] Stack: []
+2024-03-03 13:22:30,001 DEBUG o.e.Calculator [main] Parameters: {}
