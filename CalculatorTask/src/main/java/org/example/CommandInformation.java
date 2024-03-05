@@ -1,16 +1,16 @@
 package org.example;
 
-import java.util.Map;
+import java.util.Properties;
 
-public class CommandInformation{
-    public String getAvailableCommandsInfo(Map<String, String> commandMap) {
+public class CommandInformation {
+    public String getAvailableCommandsInfo(Properties commandProperties) {
         StringBuilder info = new StringBuilder("Available commands:\n");
 
-        for (Map.Entry<String, String> entry : commandMap.entrySet()) {
-            info.append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
+        for (String commandName : commandProperties.stringPropertyNames()) {
+            String className = commandProperties.getProperty(commandName);
+            info.append(commandName).append(": ").append(className).append("\n");
         }
 
         return info.toString();
     }
 }
-

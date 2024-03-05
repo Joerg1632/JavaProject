@@ -1,20 +1,18 @@
 package org.example;
 
 import java.util.EmptyStackException;
-import java.util.Map;
-import java.util.Stack;
 
 public class DivideCommand implements Command {
     @Override
-    public void execute(Stack<Double> stack, Map<String, Double> parameters) {
+    public void execute(ExecutionContext context) {
         try {
-            if (stack.size() >= 2) {
-                double divisor = stack.pop();
-                double dividend = stack.pop();
+            if (context.stack.size() >= 2) {
+                double divisor = context.stack.pop();
+                double dividend = context.stack.pop();
 
                 if (divisor != 0) {
                     double result = dividend / divisor;
-                    stack.push(result);
+                    context.stack.push(result);
                 } else {
                     throw new ArithmeticException("Division by zero.");
                 }

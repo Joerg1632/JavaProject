@@ -1,6 +1,4 @@
 package org.example;
-import java.util.Map;
-import java.util.Stack;
 
 public class PushCommand implements ParameterizedCommand {
     private String paramValue;
@@ -15,12 +13,12 @@ public class PushCommand implements ParameterizedCommand {
     }
 
     @Override
-    public void execute(Stack<Double> stack, Map<String, Double> parameters) {
+    public void execute(ExecutionContext context) {
         if (paramValue.matches("-?\\d+(\\.\\d+)?")) {  //if number
-            stack.push(Double.parseDouble(paramValue));
-        } else if (parameters.containsKey(paramValue)) {
-            double variableValue = parameters.get(paramValue);
-            stack.push(variableValue);
+            context.stack.push(Double.parseDouble(paramValue));
+        } else if (context.parameters.containsKey(paramValue)) {
+            double variableValue = context.parameters.get(paramValue);
+            context.stack.push(variableValue);
         } else {
             throw new IllegalArgumentException("Undefined parameter: " + paramValue);
         }

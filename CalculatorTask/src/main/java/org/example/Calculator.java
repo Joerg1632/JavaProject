@@ -11,16 +11,16 @@ public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
 
     public static void processCommands(BufferedReader reader, CommandFactoryClass factory,
-                                       Stack<Double> stack, Map<String, Double> parameters) throws IOException {
+                                       ExecutionContext context) throws IOException {
         String line;
         while ((line = reader.readLine()) != null) {
             logger.info("Processing command: {}", line);
 
             try {
                 Command command = factory.createCommand(line);
-                command.execute(stack, parameters);
-                logger.debug("Stack: {}", stack);
-                logger.debug("Parameters: {}", parameters);
+                command.execute(context);
+                logger.debug("Stack: {}", context.stack);
+                logger.debug("Parameters: {}", context.parameters);
             } catch (Exception e) {
                 logger.error("Error during command execution: {}", e.getMessage());
                 throw new RuntimeException("Error during command execution", e);

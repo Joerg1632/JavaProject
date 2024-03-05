@@ -1,17 +1,15 @@
 package org.example;
 
 import java.util.EmptyStackException;
-import java.util.Map;
-import java.util.Stack;
 
 public class SqrtCommand implements Command {
     @Override
-    public void execute(Stack<Double> stack, Map<String, Double> parameters) {
+    public void execute(ExecutionContext context) {
         try {
-            if (!stack.isEmpty()) {
-                double topElement = stack.pop();
+            if (!context.stack.isEmpty()) {
+                double topElement = context.stack.pop();
                 double result = Math.sqrt(topElement);
-                stack.push(result);
+                context.stack.push(result);
             } else {
                 throw new EmptyStackException();
             }

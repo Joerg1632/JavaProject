@@ -20,7 +20,7 @@ class ReaderManager implements AutoCloseable {
 
     @Override
     public void close() throws Exception {
-        if (reader != null) {
+        if (reader != null && !System.in.equals(reader)) {
             reader.close();
         }
     }

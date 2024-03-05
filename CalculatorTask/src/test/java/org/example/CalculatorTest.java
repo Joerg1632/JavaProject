@@ -1,14 +1,19 @@
 package org.example;
 
+
 import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class CalculatorTest {
+
+    private static final double DELTA = 1e-10;
 
     @Test
     public void testArithmeticOperations() {
@@ -47,14 +52,17 @@ public class CalculatorTest {
     }
 
     private void assertCalculatorResult(String input, double expectedResult) {
-        try {
-            InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+        try (InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+
             Stack<Double> stack = new Stack<>();
             Map<String, Double> parameters = new HashMap<>();
-            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)), new CommandFactoryClass("src/main/java/org/example/config.properties"), stack, parameters);
+            ExecutionContext context = new ExecutionContext(stack, parameters);
+            Calculator.processCommands(reader,
+                    new CommandFactoryClass("src/main/java/org/example/config.properties"), context);
 
             if (!stack.isEmpty()) {
-                assertEquals(expectedResult, stack.pop());
+                assertEquals(expectedResult, stack.pop(), DELTA);
             } else {
                 fail("Stack is empty");
             }
@@ -64,18 +72,19 @@ public class CalculatorTest {
     }
 
     private void assertCalculatorOutput(String input, String expectedOutput) {
-        try {
-            InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
-            ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        try (InputStream inputStream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+             ByteArrayOutputStream outContent = new ByteArrayOutputStream()) {
+
             System.setOut(new PrintStream(outContent));
             Stack<Double> stack = new Stack<>();
             Map<String, Double> parameters = new HashMap<>();
-            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)), new CommandFactoryClass("src/main/java/org/example/config.properties"), stack, parameters);
+            ExecutionContext context = new ExecutionContext(stack, parameters);
+            Calculator.processCommands(new BufferedReader(new InputStreamReader(inputStream)),
+                    new CommandFactoryClass("src/main/java/org/example/config.properties"), context);
 
             assertEquals(expectedOutput, outContent.toString().trim());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
 }

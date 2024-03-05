@@ -1,20 +1,19 @@
 package org.example;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.Properties;
 
 public class CommandFactoryClass {
-    private final Map<String, String> commandMap;
+    private final Properties commandProperties;
 
     public CommandFactoryClass(String configFile) {
-        commandMap = new HashMap<>();
-        ConfigLoader.loadConfig(configFile, commandMap); // Load classes from file
+        this.commandProperties = ConfigLoader.loadConfig(configFile); // Load classes from file
     }
 
     public Command createCommand(String line) {
         String[] tokens = line.split("\\s+");
         String commandName = tokens[0];
         try {
-            String className = commandMap.get(commandName);
+            String className = commandProperties.getProperty(commandName);
             if (className != null){
                 ClassLoader classLoader = getClass().getClassLoader();
                 Class<?> commandClass = classLoader.loadClass(className);
@@ -30,12 +29,11 @@ public class CommandFactoryClass {
             else{
                 System.out.println("Error: The command was entered incorrectly");
                 CommandInformation Info = new CommandInformation();
-                System.out.println(Info.getAvailableCommandsInfo(commandMap));
+                System.out.println(Info.getAvailableCommandsInfo(commandProperties));
                 return new NullCommand();
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+            throw new IllegalArgumentException("Error creating command", e);
         }
     }
 }

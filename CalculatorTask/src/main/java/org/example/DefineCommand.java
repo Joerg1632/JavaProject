@@ -1,8 +1,5 @@
 package org.example;
 
-import java.util.Map;
-import java.util.Stack;
-
 public class DefineCommand implements ParameterizedCommand {
     private String paramName;
     private double paramValue;
@@ -18,7 +15,7 @@ public class DefineCommand implements ParameterizedCommand {
     }
 
     @Override
-    public void execute(Stack<Double> stack, Map<String, Double> parameters) {
-        parameters.put(paramName, paramValue);
+    public void execute(ExecutionContext context) {
+        context.parameters.put(paramName, paramValue);
     }
 }
