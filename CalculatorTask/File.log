@@ -198,3 +198,45 @@
 2024-03-04 22:01:05,008 INFO o.e.Calculator [main] Processing command: PRINT
 2024-03-04 22:01:05,009 DEBUG o.e.Calculator [main] Stack: []
 2024-03-04 22:01:05,009 DEBUG o.e.Calculator [main] Parameters: {A=2.0}
+2024-03-11 00:15:09,462 INFO o.e.Calculator [main] Processing command: define a 2
+2024-03-11 00:15:09,467 DEBUG o.e.Calculator [main] Stack: []
+2024-03-11 00:15:09,467 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-11 00:15:24,688 INFO o.e.Calculator [main] Processing command: DEFINE a 2
+2024-03-11 00:15:24,691 DEBUG o.e.Calculator [main] Stack: []
+2024-03-11 00:15:24,691 DEBUG o.e.Calculator [main] Parameters: {A=2.0}
+2024-03-11 00:15:28,538 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-11 00:15:28,539 DEBUG o.e.Calculator [main] Stack: []
+2024-03-11 00:15:28,540 DEBUG o.e.Calculator [main] Parameters: {A=2.0}
+2024-03-11 00:15:32,529 INFO o.e.Calculator [main] Processing command: PUSH a
+2024-03-11 00:15:32,530 DEBUG o.e.Calculator [main] Stack: [2.0]
+2024-03-11 00:15:32,530 DEBUG o.e.Calculator [main] Parameters: {A=2.0}
+2024-03-11 00:15:34,343 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-11 00:15:34,343 DEBUG o.e.Calculator [main] Stack: [2.0]
+2024-03-11 00:15:34,344 DEBUG o.e.Calculator [main] Parameters: {A=2.0}
+2024-03-11 00:16:57,362 INFO o.e.Calculator [main] Processing command: DEFINE a 2.23509340957
+2024-03-11 00:16:57,368 DEBUG o.e.Calculator [main] Stack: []
+2024-03-11 00:16:57,369 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957}
+2024-03-11 00:16:59,798 INFO o.e.Calculator [main] Processing command: PUSH a
+2024-03-11 00:16:59,800 DEBUG o.e.Calculator [main] Stack: [2.23509340957]
+2024-03-11 00:16:59,800 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957}
+2024-03-11 00:17:01,211 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-11 00:17:01,213 DEBUG o.e.Calculator [main] Stack: [2.23509340957]
+2024-03-11 00:17:01,213 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957}
+2024-03-11 00:17:08,836 INFO o.e.Calculator [main] Processing command: DEFINE b -4
+2024-03-11 00:17:08,837 DEBUG o.e.Calculator [main] Stack: [2.23509340957]
+2024-03-11 00:17:08,837 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957, B=-4.0}
+2024-03-11 00:17:11,774 INFO o.e.Calculator [main] Processing command: PUSH b
+2024-03-11 00:17:11,775 DEBUG o.e.Calculator [main] Stack: [2.23509340957, -4.0]
+2024-03-11 00:17:11,776 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957, B=-4.0}
+2024-03-11 00:17:13,393 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-11 00:17:13,393 DEBUG o.e.Calculator [main] Stack: [2.23509340957, -4.0]
+2024-03-11 00:17:13,394 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957, B=-4.0}
+2024-03-11 00:17:23,569 INFO o.e.Calculator [main] Processing command: DEFINE g 2
+2024-03-11 00:17:23,570 DEBUG o.e.Calculator [main] Stack: [2.23509340957, -4.0]
+2024-03-11 00:17:23,570 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957, B=-4.0, G=2.0}
+2024-03-11 00:17:28,290 INFO o.e.Calculator [main] Processing command: PUSH g
+2024-03-11 00:17:28,290 DEBUG o.e.Calculator [main] Stack: [2.23509340957, -4.0, 2.0]
+2024-03-11 00:17:28,291 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957, B=-4.0, G=2.0}
+2024-03-11 00:17:29,388 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-11 00:17:29,390 DEBUG o.e.Calculator [main] Stack: [2.23509340957, -4.0, 2.0]
+2024-03-11 00:17:29,390 DEBUG o.e.Calculator [main] Parameters: {A=2.23509340957, B=-4.0, G=2.0}
