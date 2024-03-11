@@ -5,8 +5,10 @@ import java.util.EmptyStackException;
 public class DivideCommand implements Command {
     @Override
     public void execute(ExecutionContext context) {
-        try {
-            if (context.stack.size() >= 2) {
+
+            if (context.stack.size() < 2) {
+                System.out.println("Error: Not enough operands for division.");
+            } else {
                 double divisor = context.stack.pop();
                 double dividend = context.stack.pop();
 
@@ -14,14 +16,11 @@ public class DivideCommand implements Command {
                     double result = dividend / divisor;
                     context.stack.push(result);
                 } else {
-                    throw new ArithmeticException("Division by zero.");
+                    context.stack.push(dividend);
+                    context.stack.push(divisor);
+                    System.out.println("Error: Division by zero. Result undefined.");
                 }
-            } else {
-                throw new EmptyStackException();
             }
-        } catch (EmptyStackException | ArithmeticException e) {
-            throw new IllegalArgumentException("Error during division: " + e.getMessage());
         }
     }
-}
 

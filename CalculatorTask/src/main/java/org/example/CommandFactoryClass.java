@@ -33,7 +33,8 @@ public class CommandFactoryClass {
                 return new NullCommand();
             }
         } catch (Exception e) {
-            throw new IllegalArgumentException("Error creating command", e);
+            System.out.println("Error creating command");
+            return new NullCommand();
         }
     }
 }

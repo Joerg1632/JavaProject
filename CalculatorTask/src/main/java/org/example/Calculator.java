@@ -4,8 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Map;
-import java.util.Stack;
 
 public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
@@ -22,8 +20,8 @@ public class Calculator {
                 logger.debug("Stack: {}", context.stack);
                 logger.debug("Parameters: {}", context.parameters);
             } catch (Exception e) {
-                logger.error("Error during command execution: {}", e.getMessage());
-                throw new RuntimeException("Error during command execution", e);
+                logger.error("Error during command execution");
+                System.out.println("Error during command execution");
             }
         }
     }

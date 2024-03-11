@@ -12,7 +12,7 @@ public class ConfigLoader {
         try (FileReader reader = new FileReader(configFile)) {
             properties.load(reader);
         } catch (IOException e) {
-            throw new RuntimeException("Error loading configuration from file: " + configFile, e);
+            System.out.println("Error loading configuration from file: " + configFile);
         }
 
         return properties;

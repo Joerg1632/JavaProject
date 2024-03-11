@@ -14,7 +14,7 @@ public class Main {
         try (ReaderManager readerManager = new ReaderManager()) {
             Calculator.processCommands(readerManager.createReader(args), factory, context);
         } catch (Exception e) {
-            throw new RuntimeException("Error during command processing", e);
+            System.err.println("Error during command processing");
         }
     }
 }

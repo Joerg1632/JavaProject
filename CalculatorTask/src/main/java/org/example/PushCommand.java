@@ -20,7 +20,7 @@ public class PushCommand implements ParameterizedCommand {
             double variableValue = context.parameters.get(paramValue);
             context.stack.push(variableValue);
         } else {
-            throw new IllegalArgumentException("Undefined parameter: " + paramValue);
+            System.out.println("Undefined parameter " + paramValue);
         }
     }
 }
