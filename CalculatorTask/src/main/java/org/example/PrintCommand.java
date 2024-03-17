@@ -7,7 +7,7 @@ public class PrintCommand implements Command {
             double topElement = context.stack.peek();
             System.out.println(topElement);
         } else {
-            System.out.println("Stack is empty.");
+            throw new CommandExecutionException("Error: Stack is empty.");
         }
     }
 }

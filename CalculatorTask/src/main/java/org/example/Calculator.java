@@ -19,9 +19,15 @@ public class Calculator {
                 command.execute(context);
                 logger.debug("Stack: {}", context.stack);
                 logger.debug("Parameters: {}", context.parameters);
-            } catch (Exception e) {
-                logger.error("Error during command execution");
-                System.out.println("Error during command execution");
+            } catch (CommandCreationException e) {
+                logger.error("Error creating command: {}", e.getMessage());
+                System.out.println("Error creating command: " + e.getMessage());
+            } catch (CommandExecutionException e) {
+                logger.error("Error during command execution: {}", e.getMessage());
+                System.out.println("Error during command execution: " + e.getMessage());
+            } catch (InvalidParameterException e) {
+                logger.error("Invalid parameter: {}", e.getMessage());
+                System.out.println("Invalid parameter: " + e.getMessage());
             }
         }
     }

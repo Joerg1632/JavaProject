@@ -6,7 +6,7 @@ public class PopCommand implements Command {
         if (!context.stack.isEmpty()) {
             context.stack.pop();
         } else {
-            System.out.println("Error: Stack is empty.");
+            throw new CommandExecutionException("Error: Stack is empty.");
         }
     }
 }

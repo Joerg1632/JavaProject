@@ -11,10 +11,10 @@ public class DefineCommand implements ParameterizedCommand {
             try {
                 this.paramValue = Double.parseDouble(tokens[2]);
             } catch (NumberFormatException e) {
-                System.out.println("Ignoring invalid DEFINE command. Cannot parse '" + tokens[2] + "' as a valid number.");
+                throw new InvalidParameterException("Ignoring invalid DEFINE command. Cannot parse '" + tokens[2] + "' as a valid number.");
             }
         } else {
-            System.out.println("Ignoring invalid DEFINE command: " + String.join(" ", tokens) + "not enough parameters");
+            throw new InvalidParameterException("Ignoring invalid DEFINE command: " + String.join(" ", tokens) + " not enough parameters");
         }
     }
 

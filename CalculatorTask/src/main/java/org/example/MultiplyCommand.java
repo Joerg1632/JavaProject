@@ -9,7 +9,7 @@ public class MultiplyCommand implements Command {
             double result = operand1 * operand2;
             context.stack.push(result);
         } else {
-            System.err.println("Error: Not enough operands on the stack for multiplication.");
+            throw new CommandExecutionException("Not enough operands on the stack for multiplication.");
         }
     }
 }

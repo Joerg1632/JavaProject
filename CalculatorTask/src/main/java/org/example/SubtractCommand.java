@@ -9,7 +9,7 @@ public class SubtractCommand implements Command {
             double result = operand1 - operand2;
             context.stack.push(result);
         } else {
-            System.err.println("Not enough operands on the stack for subtraction.");
+            throw new CommandExecutionException("Not enough operands on the stack for subtraction.");
         }
     }
 }

@@ -9,7 +9,7 @@ public class CommandFactoryClass {
         this.commandProperties = ConfigLoader.loadConfig(configFile); // Load classes from file
     }
 
-    public Command createCommand(String line) {
+    public Command createCommand(String line) throws InvalidParameterException {
         String[] tokens = line.split("\\s+");
         String commandName = tokens[0];
         try {
@@ -32,9 +32,10 @@ public class CommandFactoryClass {
                 System.out.println(Info.getAvailableCommandsInfo(commandProperties));
                 return new NullCommand();
             }
+        } catch (InvalidParameterException e) {
+            throw e;
         } catch (Exception e) {
-            System.out.println("Error creating command");
-            return new NullCommand();
+            throw new CommandCreationException("Error creating command", e);
         }
     }
 }

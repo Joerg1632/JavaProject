@@ -117,3 +117,74 @@
 2024-03-11 22:56:38,466 INFO o.e.Calculator [main] Processing command: DEFINE a
 2024-03-11 22:56:38,471 DEBUG o.e.Calculator [main] Stack: []
 2024-03-11 22:56:38,471 DEBUG o.e.Calculator [main] Parameters: {null=0.0}
+2024-03-17 21:49:07,599 INFO o.e.Calculator [main] Processing command: PUSH 5
+2024-03-17 21:49:07,604 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-17 21:49:07,604 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 21:49:08,733 INFO o.e.Calculator [main] Processing command: +
+2024-03-17 21:49:08,735 ERROR o.e.Calculator [main] Error during command execution
+2024-03-17 22:03:43,425 INFO o.e.Calculator [main] Processing command: PUSH 5
+2024-03-17 22:03:43,429 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-17 22:03:43,429 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:03:44,481 INFO o.e.Calculator [main] Processing command: +
+2024-03-17 22:03:44,483 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-17 22:03:44,483 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:03:52,033 INFO o.e.Calculator [main] Processing command: PUSH 3
+2024-03-17 22:03:52,033 DEBUG o.e.Calculator [main] Stack: [5.0, 3.0]
+2024-03-17 22:03:52,034 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:03:53,595 INFO o.e.Calculator [main] Processing command: +
+2024-03-17 22:03:53,596 DEBUG o.e.Calculator [main] Stack: [8.0]
+2024-03-17 22:03:53,596 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:03:55,013 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-17 22:03:55,015 DEBUG o.e.Calculator [main] Stack: [8.0]
+2024-03-17 22:03:55,015 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:08:40,324 INFO o.e.Calculator [main] Processing command: PUSH 5
+2024-03-17 22:08:40,327 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-17 22:08:40,327 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:08:41,403 INFO o.e.Calculator [main] Processing command: +
+2024-03-17 22:08:41,404 ERROR o.e.Calculator [main] Error during command execution: Not enough operands for addition.
+2024-03-17 22:17:14,141 INFO o.e.Calculator [main] Processing command: згыр 5
+2024-03-17 22:17:14,144 ERROR o.e.Calculator [main] Error creating command: Error creating command
+2024-03-17 22:18:25,216 INFO o.e.Calculator [main] Processing command: PUSs 5
+2024-03-17 22:18:25,219 ERROR o.e.Calculator [main] Error creating command: Error creating command
+2024-03-17 22:19:02,964 INFO o.e.Calculator [main] Processing command: PUsh 5
+2024-03-17 22:19:02,967 DEBUG o.e.Calculator [main] Stack: []
+2024-03-17 22:19:02,967 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:28:15,312 INFO o.e.Calculator [main] Processing command: DEFINE a 2fig
+2024-03-17 22:28:15,317 ERROR o.e.Calculator [main] Error creating command: Error creating command
+2024-03-17 22:32:41,369 INFO o.e.Calculator [main] Processing command: DEFINE a 2fig
+2024-03-17 22:32:41,375 ERROR o.e.Calculator [main] Error creating command: Error creating command
+2024-03-17 22:37:31,487 INFO o.e.Calculator [main] Processing command: DEFINE a 2fig
+2024-03-17 22:37:31,493 ERROR o.e.Calculator [main] Error creating command: Error creating command
+2024-03-17 22:39:49,053 INFO o.e.Calculator [main] Processing command: PUSH 4
+2024-03-17 22:39:49,057 DEBUG o.e.Calculator [main] Stack: [4.0]
+2024-03-17 22:39:49,057 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:39:50,053 INFO o.e.Calculator [main] Processing command: /
+2024-03-17 22:39:50,054 ERROR o.e.Calculator [main] Error during command execution: Not enough operands for division.
+2024-03-17 22:40:49,392 INFO o.e.Calculator [main] Processing command: PUSH 4
+2024-03-17 22:40:49,397 DEBUG o.e.Calculator [main] Stack: [4.0]
+2024-03-17 22:40:49,397 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:40:50,116 INFO o.e.Calculator [main] Processing command: *
+2024-03-17 22:40:50,118 ERROR o.e.Calculator [main] Error during command execution: Not enough operands on the stack for multiplication.
+2024-03-17 22:46:06,925 INFO o.e.Calculator [main] Processing command: PUSH 2dig
+2024-03-17 22:46:06,931 ERROR o.e.Calculator [main] Error during command execution: Undefined parameter 2DIG
+2024-03-17 22:46:12,663 INFO o.e.Calculator [main] Processing command: PUSH %
+2024-03-17 22:46:12,664 ERROR o.e.Calculator [main] Error during command execution: Undefined parameter %
+2024-03-17 22:46:14,718 INFO o.e.Calculator [main] Processing command: PUSH 5
+2024-03-17 22:46:14,720 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-17 22:46:14,721 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:46:16,948 INFO o.e.Calculator [main] Processing command: PUSH 3
+2024-03-17 22:46:16,949 DEBUG o.e.Calculator [main] Stack: [5.0, 3.0]
+2024-03-17 22:46:16,949 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:46:18,403 INFO o.e.Calculator [main] Processing command: +
+2024-03-17 22:46:18,405 DEBUG o.e.Calculator [main] Stack: [8.0]
+2024-03-17 22:46:18,405 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:46:19,792 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-17 22:46:19,795 DEBUG o.e.Calculator [main] Stack: [8.0]
+2024-03-17 22:46:19,795 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:49:14,364 INFO o.e.Calculator [main] Processing command: DEFINE a 2dig
+2024-03-17 22:49:14,371 ERROR o.e.Calculator [main] Error creating command: Error creating command
+2024-03-17 22:51:04,903 INFO o.e.Calculator [main] Processing command: DEFINE a 2gid
+2024-03-17 22:51:04,910 ERROR o.e.Calculator [main] Invalid parameter: Ignoring invalid DEFINE command. Cannot parse '2gid' as a valid number.
+2024-03-17 22:51:15,915 INFO o.e.Calculator [main] Processing command: define a 2g
+2024-03-17 22:51:15,919 DEBUG o.e.Calculator [main] Stack: []
+2024-03-17 22:51:15,919 DEBUG o.e.Calculator [main] Parameters: {}
