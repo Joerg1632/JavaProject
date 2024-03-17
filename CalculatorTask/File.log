@@ -188,3 +188,15 @@
 2024-03-17 22:51:15,915 INFO o.e.Calculator [main] Processing command: define a 2g
 2024-03-17 22:51:15,919 DEBUG o.e.Calculator [main] Stack: []
 2024-03-17 22:51:15,919 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:55:43,708 INFO o.e.Calculator [main] Processing command: PUSH 5
+2024-03-17 22:55:43,713 DEBUG o.e.Calculator [main] Stack: [5.0]
+2024-03-17 22:55:43,713 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:55:45,889 INFO o.e.Calculator [main] Processing command: PUSH 3
+2024-03-17 22:55:45,890 DEBUG o.e.Calculator [main] Stack: [5.0, 3.0]
+2024-03-17 22:55:45,890 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:55:48,181 INFO o.e.Calculator [main] Processing command: +
+2024-03-17 22:55:48,184 DEBUG o.e.Calculator [main] Stack: [8.0]
+2024-03-17 22:55:48,184 DEBUG o.e.Calculator [main] Parameters: {}
+2024-03-17 22:55:49,393 INFO o.e.Calculator [main] Processing command: PRINT
+2024-03-17 22:55:49,395 DEBUG o.e.Calculator [main] Stack: [8.0]
+2024-03-17 22:55:49,395 DEBUG o.e.Calculator [main] Parameters: {}
