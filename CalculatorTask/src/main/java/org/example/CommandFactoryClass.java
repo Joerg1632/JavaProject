@@ -6,7 +6,7 @@ public class CommandFactoryClass {
     private final Properties commandProperties;
 
     public CommandFactoryClass(String configFile) {
-        this.commandProperties = ConfigLoader.loadConfig(configFile); // Load classes from file
+        this.commandProperties = ConfigLoader.loadConfig(configFile);
     }
 
     public Command createCommand(String line) throws InvalidParameterException {
