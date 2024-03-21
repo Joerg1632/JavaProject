@@ -1,4 +1,4 @@
-package org.example;
+package org.nsu.exceptions;
 
 public class CommandExecutionException extends RuntimeException {
     public CommandExecutionException(String message) {

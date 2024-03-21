@@ -1,4 +1,11 @@
-package org.example;
+package org.nsu.util;
+
+
+import org.nsu.commands.Command;
+import org.nsu.commands.NullCommand;
+import org.nsu.commands.ParameterizedCommand;
+import org.nsu.exceptions.CommandCreationException;
+import org.nsu.exceptions.InvalidParameterException;
 
 import java.util.Properties;
 
@@ -9,19 +16,14 @@ public class CommandFactoryClass {
         this.commandProperties = ConfigLoader.loadConfig(configFile);
     }
 
-    public Command createCommand(String line) throws InvalidParameterException {
-        String[] tokens = line.split("\\s+");
-        String commandName = tokens[0];
+    public Command createCommand(String commandName) throws InvalidParameterException {
         try {
             String className = commandProperties.getProperty(commandName);
             if (className != null){
                 ClassLoader classLoader = getClass().getClassLoader();
                 Class<?> commandClass = classLoader.loadClass(className);
-
                 if (ParameterizedCommand.class.isAssignableFrom(commandClass)) {
-                    ParameterizedCommand parameterizedCommand = (ParameterizedCommand) commandClass.getDeclaredConstructor().newInstance();
-                    parameterizedCommand.setParameters(tokens);
-                    return parameterizedCommand;
+                    return (ParameterizedCommand) commandClass.getDeclaredConstructor().newInstance();
                 } else {
                     return (Command) commandClass.getDeclaredConstructor().newInstance();
                 }

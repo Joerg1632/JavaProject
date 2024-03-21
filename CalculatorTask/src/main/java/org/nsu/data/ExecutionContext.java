@@ -1,4 +1,4 @@
-package org.example;
+package org.nsu.data;
 
 import java.util.Map;
 import java.util.Stack;

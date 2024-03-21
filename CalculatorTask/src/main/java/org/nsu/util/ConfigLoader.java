@@ -1,4 +1,4 @@
-package org.example;
+package org.nsu.util;
 
 import java.io.FileReader;
 import java.io.IOException;

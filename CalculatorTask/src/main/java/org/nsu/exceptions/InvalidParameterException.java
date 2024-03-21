@@ -1,6 +1,6 @@
-package org.example;
+package org.nsu.exceptions;
 
-public class InvalidParameterException extends RuntimeException {
+public class InvalidParameterException extends Exception {
     public InvalidParameterException(String message) {
         super(message);
     }

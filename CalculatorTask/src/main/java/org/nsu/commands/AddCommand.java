@@ -1,4 +1,7 @@
-package org.example;
+package org.nsu.commands;
+
+import org.nsu.data.ExecutionContext;
+import org.nsu.exceptions.CommandExecutionException;
 
 public class AddCommand implements Command {
     @Override

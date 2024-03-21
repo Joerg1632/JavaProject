@@ -1,4 +1,4 @@
-package org.example;
+package org.nsu.exceptions;
 
 public class CommandCreationException extends RuntimeException {
     public CommandCreationException(String message) {

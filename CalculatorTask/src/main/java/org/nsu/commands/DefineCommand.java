@@ -1,4 +1,7 @@
-package org.example;
+package org.nsu.commands;
+
+import org.nsu.data.ExecutionContext;
+import org.nsu.exceptions.InvalidParameterException;
 
 public class DefineCommand implements ParameterizedCommand {
     private String paramName;

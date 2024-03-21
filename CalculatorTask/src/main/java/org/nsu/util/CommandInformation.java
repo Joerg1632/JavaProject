@@ -1,4 +1,4 @@
-package org.example;
+package org.nsu.util;
 
 import java.util.Properties;
 
