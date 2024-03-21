@@ -6,7 +6,7 @@ import org.nsu.data.ExecutionContext;
 
 public class SqrtCommand implements Command {
     @Override
-    public void execute(ExecutionContext context) {
+    public void execute(ExecutionContext context) throws CommandExecutionException {
         if (!context.stack.isEmpty()) {
             double topElement = context.stack.pop();
             double result = Math.sqrt(topElement);

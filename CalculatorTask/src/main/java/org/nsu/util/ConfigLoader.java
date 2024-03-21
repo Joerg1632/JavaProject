@@ -3,6 +3,7 @@ package org.nsu.util;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+import org.nsu.exceptions.ConfigurationLoadException;
 
 public class ConfigLoader {
 
@@ -12,7 +13,7 @@ public class ConfigLoader {
         try (FileReader reader = new FileReader(configFile)) {
             properties.load(reader);
         } catch (IOException e) {
-            System.out.println("Error loading configuration from file: " + configFile);
+            throw new ConfigurationLoadException("Error loading configuration from file: " + configFile, e);
         }
 
         return properties;

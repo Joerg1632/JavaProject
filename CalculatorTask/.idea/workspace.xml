@@ -5,34 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdf3279-74f3-46c5-8ed5-040b92857bbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/exceptions/ConfigurationLoadException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/util/LineParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AddCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CommandCreationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CommandExecutionException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CommandFactoryClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CommandInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConfigLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DefineCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DivideCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ExecutionContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InvalidParameterException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MultiplyCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NullCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ParameterizedCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PopCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PrintCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PushCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ReaderManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SqrtCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SubtractCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/DefineCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/DefineCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/DivideCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/DivideCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/MultiplyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/MultiplyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/ParameterizedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/ParameterizedCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/PopCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/PopCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/PrintCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/PrintCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/PushCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/PushCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/SqrtCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/SqrtCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/commands/SubtractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/commands/SubtractCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/exceptions/CommandExecutionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/exceptions/CommandExecutionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/exceptions/InvalidParameterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/exceptions/InvalidParameterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/main/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/main/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/util/CommandFactoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/util/CommandFactoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/util/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/util/ConfigLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +59,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.CommandLineTest.executor": "Run",
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "JUnit.CalculatorTest.executor": "Run",
     "JUnit.CalculatorTest.testArithmeticOperationsWithVariables.executor": "Run",
     "JUnit.CommandLineTest.executor": "Run",
@@ -162,7 +153,7 @@
       <workItem from="1710738546629" duration="541000" />
       <workItem from="1710739224259" duration="2514000" />
       <workItem from="1710911139301" duration="984000" />
-      <workItem from="1711014407155" duration="8279000" />
+      <workItem from="1711014407155" duration="16540000" />
     </task>
     <servers />
   </component>
@@ -179,5 +170,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/nsu/main/Main.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

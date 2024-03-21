@@ -1,6 +1,6 @@
 package org.nsu.exceptions;
 
-public class CommandExecutionException extends RuntimeException {
+public class CommandExecutionException extends Exception {
     public CommandExecutionException(String message) {
         super(message);
     }
