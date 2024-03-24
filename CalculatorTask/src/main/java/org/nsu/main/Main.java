@@ -35,21 +35,24 @@ public class Main {
                     lineParser.read(line);
                     String commandName = lineParser.getCommandName();
                     Command command = factory.createCommand(commandName);
-                    if (command instanceof ParameterizedCommand){
-                        ((ParameterizedCommand) command).setParameters(lineParser.getTokens());
+                    try{
+                        if (command instanceof ParameterizedCommand){
+                            ((ParameterizedCommand) command).setParameters(lineParser.getTokens());
+                        }
+                            calculator.processCommand(command);
+                    } catch (CommandExecutionException e) {
+                        logger.error("Error during command execution: {}", e.getMessage());
+                        System.out.println("Error during command execution: " + e.getMessage());
+                    } catch (InvalidParameterException e) {
+                        logger.error("Invalid parameter: {}", e.getMessage());
+                        System.out.println("Invalid parameter: " + e.getMessage());
                     }
-                    calculator.processCommand(command);
             }
         } catch (CommandCreationException e) {
             logger.error("Error creating command: {}", e.getMessage());
             System.out.println("Error creating command: " + e.getMessage());
-        } catch (CommandExecutionException e) {
-            logger.error("Error during command execution: {}", e.getMessage());
-            System.out.println("Error during command execution: " + e.getMessage());
-        } catch (InvalidParameterException e) {
-            logger.error("Invalid parameter: {}", e.getMessage());
-            System.out.println("Invalid parameter: " + e.getMessage());
-        } catch (ConfigurationLoadException e) {
+            System.exit(1);
+        }  catch (ConfigurationLoadException e) {
             logger.error("Error loading configuration: {}", e.getMessage());
             System.out.println("Error loading configuration: " + e.getMessage());
             System.exit(1);

@@ -11,7 +11,7 @@ public class PushCommand implements ParameterizedCommand {
     @Override
     public void setParameters(String[] tokens) throws CommandCreationException {
         if (tokens.length == 2) {
-            this.paramValue = tokens[1].toUpperCase();
+            this.paramValue = tokens[1];
         } else {
             throw new CommandCreationException("Invalid PUSH command: " + String.join(" ", tokens));
         }

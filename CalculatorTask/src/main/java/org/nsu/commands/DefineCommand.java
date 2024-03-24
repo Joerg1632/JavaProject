@@ -17,16 +17,19 @@ public class DefineCommand implements ParameterizedCommand {
             boolean validNumber = isValidNumber(tokens[2]);
 
             if (validVariable && validNumber) {
-                this.paramName = tokens[1].toUpperCase();
+                this.paramName = tokens[1];
                 this.paramValue = Double.parseDouble(tokens[2]);
             } else if (!validVariable && !validNumber) {
-                throw new InvalidParameterException("Ignoring invalid DEFINE command: Both parameters are invalid.");
+                throw new InvalidParameterException("Ignoring invalid DEFINE command: BOTH PARAMETERS ARE INVALID.");
             } else if (!validVariable) {
                 throw new InvalidParameterException("Ignoring invalid DEFINE command: Parameter '" + tokens[1] + "' is not a valid variable. FIRST PARAMETER INVALID");
             } else {
                 throw new InvalidParameterException("Ignoring invalid DEFINE command: Cannot parse '" + tokens[2] + "' as a valid number. SECOND PARAMETER INVALID");
             }
-        } else {
+        } else if(tokens.length > 3){
+            throw new CommandExecutionException("Ignoring invalid DEFINE command: " + String.join(" ", tokens) + " too much parameters");
+        }
+        else{
             throw new CommandExecutionException("Ignoring invalid DEFINE command: " + String.join(" ", tokens) + " not enough parameters");
         }
     }
