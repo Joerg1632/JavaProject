@@ -25,7 +25,7 @@ public class Main {
 
         try (ReaderManager readerManager = new ReaderManager()) {
             BufferedReader reader = readerManager.createReader(args);
-            Properties properties = ConfigLoader.loadConfig("src/main/java/org/nsu/main/config.properties");
+            Properties properties = ConfigLoader.loadConfig("/config.properties");
             factory.setCommandProperties(properties);
             String line;
             while ((line = reader.readLine()) != null) {
@@ -35,28 +35,22 @@ public class Main {
                 try{
                 String commandName = lineParser.getCommandName();
                 Command command = factory.createCommand(commandName);
-
                         if (command instanceof ParameterizedCommand){
                             ((ParameterizedCommand) command).setParameters(lineParser.getTokens());
                         }
                             calculator.processCommand(command);
                 } catch (CommandExecutionException e) {
                     logger.error("Error during command execution: {}", e.getMessage());
-                    System.out.println("Error during command execution: " + e.getMessage());
                 } catch (InvalidParameterException e) {
                     logger.error("Invalid parameter: {}", e.getMessage());
-                    System.out.println("Invalid parameter: " + e.getMessage());
                 } catch (EmptyLineException e) {
                     logger.error("Empty line encountered: {}", e.getMessage());
-                    System.out.println("Empty line encountered: " + e.getMessage());
                 }
             }
         } catch (CommandCreationException e) {
             logger.error("Error creating command: {}", e.getMessage());
-            System.out.println("Error creating command: " + e.getMessage());
         }  catch (ConfigurationLoadException e) {
             logger.error("Error loading configuration: {}", e.getMessage());
-            System.out.println("Error loading configuration: " + e.getMessage());
         }
         catch (Exception e) {
             throw new RuntimeException(e);
