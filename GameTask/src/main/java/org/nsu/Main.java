@@ -1,16 +1,19 @@
 package org.nsu;
-import org.nsu.controller.Controller;
-import org.nsu.model.Model;
-import org.nsu.view.View;
+
+import org.nsu.controller.SnakeGameController;
+import org.nsu.model.GameBoard;
+import org.nsu.model.SnakeGameModel;
+import org.nsu.view.SnakeGameView;
+
+
 
 public class Main {
     public static void main(String[] args) {
-        // Создание объектов модели, представления и контроллера
-        Model model = new Model();
-        View view = new View();
-        Controller controller = new Controller(model, view);
+        GameBoard gameBoard = new GameBoard();
+        SnakeGameModel model = new SnakeGameModel();
+        SnakeGameView view = new SnakeGameView(model, gameBoard);
+        SnakeGameController controller = new SnakeGameController(model, view);
 
-        // Отображение главного окна
-        view.show();
+        SnakeGameView.initializeGui(view);
     }
 }

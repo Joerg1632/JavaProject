@@ -4,30 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22509bcf-7bd0-47ff-ae5a-742c818e898b" name="Changes" comment="" />
+    <list default="true" id="22509bcf-7bd0-47ff-ae5a-742c818e898b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/config/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/details/Accessory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/details/Body.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/details/Engine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/gui/FactoryGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/storage/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/storage/StorageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/threads/Dealer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/threads/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/threads/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/threads/Worker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/util/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FactoryTask/src/main/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameLoopManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/InputManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/PropertyManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/SnakeGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/model/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/model/GameBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/model/GameLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/model/Snake.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/model/SnakeGameModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/model/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/view/SnakeGameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FactoryTask/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FactoryTask/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FactoryTask/src/main/java/org/nsu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/model/Bot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/model/Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/model/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/model/Picture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/model/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/panels/ChoosePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/panels/GameField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/panels/PanelButtons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/view/View.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2eCx4ECOVjfu8i7jpbvLU7Fg723" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/JavaProject/JavaProject/GameTask/src/main/java/org/example/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Task4&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaProject/JavaProject/GameTask/src/main/java/org/example/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,22 +106,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711422169008</updated>
-      <workItem from="1711422170211" duration="3000" />
+      <workItem from="1711422170211" duration="1164000" />
+      <workItem from="1711423347747" duration="7400000" />
+      <workItem from="1711430777801" duration="271000" />
+      <workItem from="1711514355539" duration="1537000" />
+      <workItem from="1711701408785" duration="1095000" />
+      <workItem from="1711950835284" duration="622000" />
+      <workItem from="1712028891184" duration="7007000" />
+      <workItem from="1713765060865" duration="498000" />
+      <workItem from="1714288367569" duration="287000" />
+      <workItem from="1714288718072" duration="21028000" />
+      <workItem from="1714360427798" duration="342000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
