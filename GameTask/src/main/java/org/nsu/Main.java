@@ -12,7 +12,7 @@ public class Main {
         GameBoard gameBoard = new GameBoard();
         SnakeGameModel model = new SnakeGameModel();
         SnakeGameView view = new SnakeGameView(model, gameBoard);
-        SnakeGameController controller = new SnakeGameController(model, view);
+        SnakeGameController controller = new SnasdfkeGameController(model, view);
 
         SnakeGameView.initializeGui(view);
     }
