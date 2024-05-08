@@ -6,38 +6,39 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class GameLoopManager implements ActionListener {
+public class GameLoopManager implements ActionListener {
     private final Timer gameLoop;
-    private final SnakeGameModel model;
+    private final GameController controller;
     private final SnakeGameView view;
     private final PropertyManager propertyManager;
+    private final SnakeGameModel model;
 
-    public GameLoopManager(SnakeGameModel model, SnakeGameView view) {
-        this.model = model;
+    public GameLoopManager(SnakeGameModel model, SnakeGameView view, GameController controller) {
+        this.controller = controller;
         this.view = view;
+        this.model = model;
         this.gameLoop = new Timer(100, this);
-        this.propertyManager = new PropertyManager(view);
-    }
-
-    public PropertyManager getPropertyManager() {
-        return propertyManager;
+        this.propertyManager = new PropertyManager(model, controller);
     }
 
     public void startGameLoop() {
         this.gameLoop.start();
     }
 
+    public void restartGameLoop() {
+        this.gameLoop.restart();
+    }
+
     public void actionPerformed(ActionEvent e) {
-        model.move();
+        controller.move();
         view.repaint();
         if (model.isGameOver()) {
             gameLoop.stop();
             int currentScore = model.getSnakeBody().size();
-            if (currentScore > view.getCurrentHighScore()) {
-                view.setCurrentHighScore(currentScore);
+            if (currentScore > model.getCurrentHighScore()) {
+                controller.setCurrentHighScore(currentScore);
                 propertyManager.saveProperties();
             }
         }
     }
 }
-

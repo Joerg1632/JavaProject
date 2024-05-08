@@ -5,8 +5,10 @@ import java.util.Random;
 public class Food {
     private final Random random = new Random();
     private Tile food;
+    private final GameBoard gameBoard;
 
-    public Food() {
+    public Food(GameBoard gameBoard) {
+        this.gameBoard = gameBoard;
         placeFood();
     }
 
@@ -15,7 +17,7 @@ public class Food {
     }
 
     public void placeFood() {
-        food = new Tile(random.nextInt(SnakeGameModel.BOARD_WIDTH / SnakeGameModel.tileSize),
-                random.nextInt(SnakeGameModel.BOARD_HEIGHT / SnakeGameModel.tileSize));
+        food = new Tile(random.nextInt(gameBoard.getBoardWidth() / Tile.tileSize),
+                random.nextInt(gameBoard.getBoardHeight() / Tile.tileSize));
     }
 }

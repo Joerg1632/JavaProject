@@ -3,36 +3,19 @@ package org.nsu.model;
 import java.util.ArrayList;
 
 public class SnakeGameModel {
-    public static final int BOARD_WIDTH = 600;
-    public static final int BOARD_HEIGHT = 600;
-    public static int tileSize = 25;
+    public int currentHighScore;
 
-    private final Snake snake;
-    private final Food food;
-    private final GameBoard gameBoard;
-    private final GameLogic gameLogic;
+    public Snake snake;
+    public final Food food;
+    public static Tile tile;
+    public GameBoard gameBoard;
+    public boolean gameOver = false;
 
     public SnakeGameModel() {
         snake = new Snake();
-        food = new Food();
         gameBoard = new GameBoard();
-        gameLogic = new GameLogic(snake, food, gameBoard);
-    }
-
-    public void restartGame() {
-        snake.getSnakeBody().clear();
-        food.placeFood();
-        snake.setVelocityX(1);
-        snake.setVelocityY(0);
-        gameLogic.gameOver = false;
-    }
-
-    public void move() {
-        gameLogic.move();
-    }
-
-    public boolean isGameOver() {
-        return gameLogic.isGameOver();
+        tile = new Tile(0,0);
+        food = new Food(gameBoard);
     }
 
     public ArrayList<Tile> getSnakeBody() {
@@ -55,11 +38,29 @@ public class SnakeGameModel {
         return snake.getVelocityY();
     }
 
-    public void setVelocityX(int velocityX) {
-        snake.setVelocityX(velocityX);
+    public static int getTileSize() {
+        return tile.getTileSize();
     }
 
-    public void setVelocityY(int velocityY) {
-        snake.setVelocityY(velocityY);
+    public int getBoardWidth() {
+        return gameBoard.getBoardWidth();
+    }
+
+    public int getBoardHeight() {
+        return gameBoard.getBoardHeight();
+    }
+
+    public int getCurrentHighScore() {
+        return currentHighScore;
+    }
+
+    public void restartGame() {
+        snake = new Snake();
+        food.placeFood();
+        gameOver = false;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
     }
 }
