@@ -30,13 +30,13 @@ public class Main extends JFrame implements Runnable, Observer {
 
     public Main(ConfigReader configReader, Settings settings) {
         this.settings = settings;
-        CarsStorage carsStorage = new CarsStorage(configReader.get(ConfigReader.Settings.storageAutoSize));
-        BodiesStorage bodiesStorage = new BodiesStorage(configReader.get(ConfigReader.Settings.storageBodySize));
-        EnginesStorage enginesStorage = new EnginesStorage(configReader.get(ConfigReader.Settings.storageEngineSize));
-        AccessoriesStorage accessoriesStorage = new AccessoriesStorage(configReader.get(ConfigReader.Settings.storageAccessorySize));
+        CarsStorage carsStorage = new CarsStorage((int) configReader.get(ConfigReader.Settings.storageAutoSize));
+        BodiesStorage bodiesStorage = new BodiesStorage((int) configReader.get(ConfigReader.Settings.storageBodySize));
+        EnginesStorage enginesStorage = new EnginesStorage((int) configReader.get(ConfigReader.Settings.storageEngineSize));
+        AccessoriesStorage accessoriesStorage = new AccessoriesStorage((int) configReader.get(ConfigReader.Settings.storageAccessorySize));
 
         accessoriesSuppliers = new ArrayList<>();
-        for (int i = 0; i < configReader.get(ConfigReader.Settings.accessorySuppliers); i++) {
+        for (int i = 0; i < (int) configReader.get(ConfigReader.Settings.accessorySuppliers); i++) {
             accessoriesSuppliers.add(new AccessoriesSupplier(settings.accessoriesSupplierSpeed, accessoriesStorage));
         }
 
@@ -45,12 +45,12 @@ public class Main extends JFrame implements Runnable, Observer {
 
         storages = new StoragesMap(enginesStorage, bodiesStorage, accessoriesStorage, carsStorage);
 
-        TasksController tasksController = new TasksController(configReader.get(ConfigReader.Settings.workers), storages);
+        TasksController tasksController = new TasksController((int) configReader.get(ConfigReader.Settings.workers), storages);
         carsStorageController = new CarsStorageController(carsStorage, tasksController);
 
         dealers = new ArrayList<>();
-        boolean log = configReader.get(ConfigReader.Settings.logSale) == 1;
-        for (int i = 0; i < configReader.get(ConfigReader.Settings.dealers); i++) {
+        boolean log = (boolean) configReader.get(ConfigReader.Settings.logSale);
+        for (int i = 0; i < (int) configReader.get(ConfigReader.Settings.dealers); i++) {
             if (log) {
                 dealers.add(new Dealer(settings.dealerPeriod, carsStorageController, true));
             } else {
@@ -58,6 +58,7 @@ public class Main extends JFrame implements Runnable, Observer {
             }
         }
     }
+
 
     public void run() {
 

@@ -1,20 +1,11 @@
 package org.nsu.config;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.HashMap;
+import java.util.Properties;
 
 public class ConfigReader {
-    private String path = "/config.json";
-    private HashMap<String, Integer> data;
-    private static final Logger logger = LoggerFactory.getLogger(ConfigReader.class);
+    private final Properties properties;
 
     public enum Settings {
         storageBodySize,
@@ -26,41 +17,29 @@ public class ConfigReader {
         dealers,
         logSale
     }
+
     public ConfigReader() {
-        data = new HashMap<>();
-        loadConfig(path);
+        properties = new Properties();
+        loadConfig();
     }
 
-    public Integer get(Settings name) {
-        return data.getOrDefault(name.name(), null);
-    }
-
-    private void loadConfig(String src) {
-        InputStream inputStream = ConfigReader.class.getResourceAsStream(src);
-        if (inputStream == null) {
-            return;
+    public Object get(Settings name) {
+        String value = properties.getProperty(name.name());
+        if (value == null) {
+            return null;
         }
-        JSONParser parser = new JSONParser();
-        JSONObject jsonObject;
-        try {
-            jsonObject = (JSONObject) parser.parse(new InputStreamReader(inputStream));
+        if (value.equalsIgnoreCase("true") || value.equalsIgnoreCase("false")) {
+            return Boolean.parseBoolean(value);
+        }
+        return Integer.parseInt(value);
+    }
+
+    private void loadConfig() {
+        String path = "src/main/resources/config.properties";
+        try (FileInputStream fileInputStream = new FileInputStream(path)) {
+            properties.load(fileInputStream);
         } catch (IOException e) {
-            logger.error("cant read config file");
-            return;
-        } catch (ParseException e) {
-            logger.error("cant parse config file");
-            return;
-        }
-        for (Object key : jsonObject.keySet()) {
-            try {
-                data.put(key.toString(), Integer.parseInt(jsonObject.get(key).toString()));
-            } catch (NumberFormatException e) {
-                try {
-                    data.put(key.toString(), Boolean.parseBoolean(jsonObject.get(key).toString()) ? 1 : 0);
-                } catch (Exception e1) {
-                    logger.error(e1.getLocalizedMessage());
-                }
-            }
+            e.printStackTrace();
         }
     }
 }

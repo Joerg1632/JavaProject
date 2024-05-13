@@ -20,7 +20,7 @@ public class Dealer extends Thread {
 
     private static final SingletonLogger logger = new SingletonLogger("DealerLog", "log.txt");
 
-    private boolean log;
+    private final boolean log;
 
     public Dealer(int period, CarsStorageController carsStorageController, boolean log) {
         this.id = IdsGenerator.generateId();
@@ -57,7 +57,7 @@ public class Dealer extends Thread {
         synchronized (carsStorageController) {
             carsStorageController.notify();
         }
-        return (Car) carsStorageController.getCarWarehouse().get();
+        return (Car) carsStorageController.getCarStorage().get();
     }
 
     public void setSpeed(int period) {

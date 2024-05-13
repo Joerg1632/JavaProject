@@ -17,7 +17,7 @@ public class CarsStorageController extends Thread {
     public CarsStorageController(CarsStorage storage, TasksController tasksController) {
         this(storage, tasksController, 5);
     }
-    public CarsStorage getCarWarehouse() {
+    public CarsStorage getCarStorage() {
         return storage;
     }
 
