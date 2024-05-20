@@ -1,27 +1,20 @@
 package org.nsu.cars_storage_controller;
 
-import org.nsu.storage.*;
-import org.nsu.threadpool.BlockingQueue;
+import org.nsu.storage.StoragesMap;
 import org.nsu.threadpool.ThreadPool;
 
 public class TasksController {
-
     protected StoragesMap storages;
-    protected BlockingQueue<Runnable> tasks;
-
-    protected ThreadPool workers;
+    protected ThreadPool threadPool;
 
     public TasksController(int workersNum, StoragesMap storages) {
         this.storages = storages;
-        this.tasks = new BlockingQueue<>();
-        this.workers = new ThreadPool(workersNum, tasks);
-        this.workers.start();
+        this.threadPool = new ThreadPool(workersNum);
     }
 
     public void addTasks(int num) {
         for (int i = 0; i < num; i++) {
-            tasks.put(new WorkerTask(storages));
+            threadPool.addTask(new WorkerTask(storages));
         }
     }
-
 }

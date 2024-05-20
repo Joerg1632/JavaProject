@@ -2,24 +2,17 @@ package org.nsu.dealer;
 
 import org.nsu.details.Car;
 import org.nsu.cars_storage_controller.CarsStorageController;
-import org.nsu.SingletonLogger;
+import org.nsu.Logger;
 import org.nsu.util.IdsGenerator;
 
-import java.io.IOException;
 import java.text.MessageFormat;
-import java.time.Instant;
-import java.util.logging.FileHandler;
 import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
 
 public class Dealer extends Thread {
     protected long id;
     protected int period;
     protected final CarsStorageController carsStorageController;
-
-    private static final SingletonLogger logger = new SingletonLogger("DealerLog", "log.txt");
-
+    private static final Logger logger = new Logger("DealerLog", "log.txt");
     private final boolean log;
 
     public Dealer(int period, CarsStorageController carsStorageController, boolean log) {
@@ -37,6 +30,7 @@ public class Dealer extends Thread {
         return this.period;
     }
 
+    @Override
     public void run() {
         while (true) {
             try {
@@ -63,5 +57,4 @@ public class Dealer extends Thread {
     public void setSpeed(int period) {
         this.period = period;
     }
-
 }

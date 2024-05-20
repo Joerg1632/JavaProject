@@ -2,16 +2,15 @@ package org.nsu;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
-import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class SingletonLogger {
-    private static SingletonLogger singletonLogger;
+public class Logger {
     private static Logger logger;
+    private static java.util.logging.Logger log;
     private static FileHandler fh;
 
-    public SingletonLogger(String loggerName, String fileName) {
-        if (singletonLogger != null) {
+    public Logger(String loggerName, String fileName) {
+        if (logger != null) {
             return;
         }
         try {
@@ -22,14 +21,14 @@ public class SingletonLogger {
 
         SimpleFormatter sf = new SimpleFormatter();
         fh.setFormatter(sf);
-        logger = Logger.getLogger(loggerName);
-        logger.setUseParentHandlers(false);
-        logger.addHandler(fh);
+        log = java.util.logging.Logger.getLogger(loggerName);
+        log.setUseParentHandlers(false);
+        log.addHandler(fh);
 
-        singletonLogger = this;
+        logger = this;
     }
 
-    public Logger getLogger() {
-        return SingletonLogger.logger;
+    public java.util.logging.Logger getLogger() {
+        return Logger.log;
     }
 }

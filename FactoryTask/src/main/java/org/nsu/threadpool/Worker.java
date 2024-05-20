@@ -1,18 +1,30 @@
 package org.nsu.threadpool;
 
-public class Worker extends Thread {
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
-    public BlockingQueue<Runnable> queue;
+public class Worker implements Runnable {
+    private final BlockingQueue<Runnable> taskQueue;
+    private final AtomicInteger taskQueueSize;
 
-    public Worker(BlockingQueue<Runnable> queue) {
-        this.queue = queue;
+    public Worker(BlockingQueue<Runnable> taskQueue, AtomicInteger taskQueueSize) {
+        this.taskQueue = taskQueue;
+        this.taskQueueSize = taskQueueSize;
+    }
+
+    public void interrupt() {
+        Thread.currentThread().interrupt();
     }
 
     @Override
     public void run() {
         while (true) {
-            Runnable task = queue.get();
-            task.run();
+            try {
+                taskQueue.take().run();
+                taskQueueSize.decrementAndGet();
+            } catch (InterruptedException e) {
+                return;
+            }
         }
     }
 }

@@ -1,9 +1,9 @@
 package org.nsu.cars_storage_controller;
 
 import org.nsu.storage.CarsStorage;
+import org.nsu.threadpool.ThreadPool;
 
 public class CarsStorageController extends Thread {
-
     protected final CarsStorage storage;
     protected final TasksController tasksController;
     protected int criticalSize;
@@ -17,10 +17,12 @@ public class CarsStorageController extends Thread {
     public CarsStorageController(CarsStorage storage, TasksController tasksController) {
         this(storage, tasksController, 5);
     }
+
     public CarsStorage getCarStorage() {
         return storage;
     }
 
+    @Override
     public synchronized void run() {
         while (true) {
             try {

@@ -1,38 +1,43 @@
 package org.nsu.storage;
 
-import org.nsu.threadpool.BlockingQueue;
+import java.util.LinkedList;
 import java.util.Objects;
 
-public class Storage<T> extends BlockingQueue<T> {
-
-    protected int capacity;
-
-    protected int totalProduced = 0;
+public class Storage<T> {
+    private final LinkedList<T> queue = new LinkedList<>();
+    private final int capacity;
+    private int totalProduced = 0;
 
     public Storage(int capacity) {
         this.capacity = capacity;
     }
 
-    public int getCurrentSize() {
+    public synchronized int getCurrentSize() {
         return queue.size();
     }
 
-    public boolean isFull() {
+    public synchronized boolean isFull() {
         return queue.size() == capacity;
     }
 
-    public int getTotalProduced() {
+    public synchronized int getTotalProduced() {
         return totalProduced;
     }
 
-    @Override
-    synchronized public T get() {
-        notify();
-        return super.get();
+    public synchronized T get() {
+        while (queue.isEmpty()) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        T item = queue.removeFirst();
+        notifyAll();
+        return item;
     }
 
-    @Override
-    synchronized public void put(T el) {
+    public synchronized void put(T el) {
         while (isFull()) {
             try {
                 wait();
@@ -40,8 +45,9 @@ public class Storage<T> extends BlockingQueue<T> {
                 throw new RuntimeException(e);
             }
         }
+        queue.addLast(el);
         totalProduced++;
-        super.put(el);
+        notifyAll();
     }
 
     @Override
@@ -56,5 +62,4 @@ public class Storage<T> extends BlockingQueue<T> {
     public int hashCode() {
         return Objects.hash(capacity);
     }
-
 }
