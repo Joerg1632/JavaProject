@@ -48,8 +48,8 @@ public class Storage<T> extends BlockingQueue<T> {
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
-        Storage<?> warehouse = (Storage<?>) object;
-        return capacity == warehouse.capacity;
+        Storage<?> storage = (Storage<?>) object;
+        return capacity == storage.capacity;
     }
 
     @Override

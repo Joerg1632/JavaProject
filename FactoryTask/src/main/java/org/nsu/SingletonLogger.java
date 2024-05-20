@@ -14,7 +14,6 @@ public class SingletonLogger {
         if (singletonLogger != null) {
             return;
         }
-
         try {
             fh = new FileHandler(fileName);
         } catch (IOException e) {

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class BlockingQueue<T> {
 
-    protected LinkedList<T> queue;
+    public LinkedList<T> queue;
 
     public BlockingQueue() {
         this.queue = new LinkedList<>();

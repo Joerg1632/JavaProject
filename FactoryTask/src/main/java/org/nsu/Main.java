@@ -17,7 +17,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Main extends JFrame implements Runnable, Observer {
+public class Main extends JFrame implements Observer {
 
     public final ArrayList<Dealer> dealers;
     public final Settings settings;
@@ -58,7 +58,6 @@ public class Main extends JFrame implements Runnable, Observer {
             }
         }
     }
-
 
     public void run() {
 
