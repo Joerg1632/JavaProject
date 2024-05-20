@@ -4,11 +4,8 @@ import org.nsu.controller.GameController;
 import org.nsu.controller.GameLoopManager;
 import org.nsu.model.SnakeGameModel;
 import org.nsu.view.SnakeGameView;
-
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import org.nsu.controller.*;
 
 public class InputManager {
     private final GameController controller;
@@ -49,7 +46,6 @@ public class InputManager {
                     System.exit(0);
                 }
             }
-
             @Override
             public void keyReleased(KeyEvent e) {}
 

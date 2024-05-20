@@ -4,8 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22509bcf-7bd0-47ff-ae5a-742c818e898b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="aa988fc3-1799-4648-950d-7321e99eda2b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameLoopManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/input_manager/InputManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/view/SnakeGameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/controller/GameController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/controller/GameLoopManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/controller/PropertyManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/input_manager/InputManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/GameBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/Snake.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/SnakeGameModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/Tile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/view/SnakeGameView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +46,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2eCx4ECOVjfu8i7jpbvLU7Fg723" />
+  <component name="ProjectId" id="2g7cmKczNI8WtdCfyFxkbHK7J7F" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,18 +66,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Task3&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaProject/JavaProject/FxGameTask&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaProject/JavaProject/GameTask/src/main/java/org/example/Main.java&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -61,24 +91,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="22509bcf-7bd0-47ff-ae5a-742c818e898b" name="Changes" comment="" />
-      <created>1711422169008</created>
+      <changelist id="aa988fc3-1799-4648-950d-7321e99eda2b" name="Changes" comment="" />
+      <created>1715052214861</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711422169008</updated>
-      <workItem from="1711422170211" duration="1164000" />
-      <workItem from="1711423347747" duration="7400000" />
-      <workItem from="1711430777801" duration="271000" />
-      <workItem from="1711514355539" duration="1537000" />
-      <workItem from="1711701408785" duration="1095000" />
-      <workItem from="1711950835284" duration="622000" />
-      <workItem from="1712028891184" duration="7007000" />
-      <workItem from="1713765060865" duration="498000" />
-      <workItem from="1714288367569" duration="287000" />
-      <workItem from="1714288718072" duration="21028000" />
-      <workItem from="1714360427798" duration="342000" />
-      <workItem from="1715141939983" duration="39000" />
-      <workItem from="1715142115625" duration="752000" />
+      <updated>1715052214861</updated>
+      <workItem from="1715052215969" duration="13435000" />
+      <workItem from="1715132276550" duration="442000" />
+      <workItem from="1715140937979" duration="39000" />
+      <workItem from="1715143155756" duration="125000" />
+      <workItem from="1715143285034" duration="512000" />
+      <workItem from="1715507932092" duration="376000" />
+      <workItem from="1715572943275" duration="2731000" />
+      <workItem from="1715578762966" duration="2268000" />
+      <workItem from="1716202830232" duration="2424000" />
     </task>
     <servers />
   </component>

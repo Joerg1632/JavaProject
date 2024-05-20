@@ -35,7 +35,7 @@ public class SnakeGameView extends JPanel {
         }
 
         // Food
-        g.setColor(Color.black);
+        g.setColor(Color.orange);
         g.fill3DRect(model.getFood().x * SnakeGameModel.getTileSize(), model.getFood().y * SnakeGameModel.getTileSize(), SnakeGameModel.getTileSize(), SnakeGameModel.getTileSize(), true);
 
         // Snake Head

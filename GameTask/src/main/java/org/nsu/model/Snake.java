@@ -11,6 +11,7 @@ public class Snake {
     public Snake() {
         snakeHead = new Tile(5, 5);
         snakeBody = new ArrayList<>();
+        snakeBody.add(snakeHead);
         velocityX = 1;
         velocityY = 0;
     }

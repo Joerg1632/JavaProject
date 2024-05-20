@@ -52,15 +52,15 @@ public class GameController {
         ArrayList<Tile> snakeBody = model.getSnakeBody();
         Tile snakeHead = model.getSnakeHead();
 
-        for (Tile snakePart : snakeBody) {
-            if (collision(snakeHead, snakePart)) {
+        for (int i = 1; i < snakeBody.size(); i++) {
+            if (collision(snakeHead, snakeBody.get(i))) {
                 model.gameOver = true;
                 return;
             }
         }
 
-        if (snakeHead.x * SnakeGameModel.getTileSize() < 0 || snakeHead.x * SnakeGameModel.getTileSize() > model.getBoardWidth() ||
-                snakeHead.y * SnakeGameModel.getTileSize() < 0 || snakeHead.y * SnakeGameModel.getTileSize() > model.getBoardHeight()) {
+        if (snakeHead.x < 0 || snakeHead.x >= model.getBoardWidth() / SnakeGameModel.getTileSize() ||
+                snakeHead.y < 0 || snakeHead.y >= model.getBoardHeight() / SnakeGameModel.getTileSize()) {
             model.gameOver = true;
         }
     }
