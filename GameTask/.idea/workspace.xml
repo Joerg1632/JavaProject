@@ -5,31 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa988fc3-1799-4648-950d-7321e99eda2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameLoopManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/input_manager/InputManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/nsu/view/SnakeGameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/controller/FxGameLoopManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/controller/GameController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/controller/GameLoopManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/controller/PropertyManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/input_manager/InputManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/input_manager/fxInputManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/model/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/model/GameBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/model/Snake.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/model/SnakeGameModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/model/Tile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/view/FxSnakeGameView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/java/org/nsu/view/SnakeGameView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FxGameTask/src/main/resources/org/nsu/fxgametask/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/controller/GameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/controller/GameLoopManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/controller/PropertyManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/input_manager/InputManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/Food.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/GameBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/Snake.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/SnakeGameModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/model/Tile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameTask/src/main/java/org/nsu/view/SnakeGameView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/view/FxSnakeGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/view/FxSnakeGameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nsu/view/SnakeGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nsu/view/SnakeGameView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +112,7 @@
       <workItem from="1715572943275" duration="2731000" />
       <workItem from="1715578762966" duration="2268000" />
       <workItem from="1716202830232" duration="2424000" />
+      <workItem from="1716205294584" duration="1574000" />
     </task>
     <servers />
   </component>

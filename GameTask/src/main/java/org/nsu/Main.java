@@ -45,7 +45,6 @@ public class Main {
 
         inputManager.registerKeyListeners();
         gameLoopManager.startGameLoop();
-
         SnakeGameView.initializeGui(view);
     }
 
@@ -80,7 +79,12 @@ public class Main {
                 primaryStage.setTitle("Snake");
                 primaryStage.setResizable(false);
                 primaryStage.show();
+
+                // Bring the window to the front
                 primaryStage.toFront();
+                primaryStage.setAlwaysOnTop(true);
+                primaryStage.setAlwaysOnTop(false);
+                primaryStage.requestFocus();
 
                 gameLoopManager.startGameLoop();
             });

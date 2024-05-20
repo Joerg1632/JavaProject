@@ -11,7 +11,7 @@ public class SnakeGameView extends JPanel {
     public SnakeGameView(SnakeGameModel model) {
         this.model = model;
         setPreferredSize(new Dimension(model.getBoardWidth(), model.getBoardHeight()));
-        setBackground(Color.GREEN);
+        setBackground(Color.green);
     }
 
     public static void initializeGui(SnakeGameView view) {
@@ -22,6 +22,8 @@ public class SnakeGameView extends JPanel {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.toFront();
+        frame.setAlwaysOnTop(true);
     }
 
     @Override
