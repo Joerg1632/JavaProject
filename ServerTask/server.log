@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-06-02T11:23:46.788121500Z</date>
+  <millis>1717327426788</millis>
+  <nanos>121500</nanos>
+  <sequence>0</sequence>
+  <logger>org.nsu.server.Server</logger>
+  <level>WARNING</level>
+  <class>org.nsu.server.Server$ClientHandler$MessageReader</class>
+  <method>run</method>
+  <thread>33</thread>
+  <message>Socket closed</message>
+</record>
+</log>
