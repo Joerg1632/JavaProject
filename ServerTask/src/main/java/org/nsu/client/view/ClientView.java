@@ -1,4 +1,4 @@
-package org.nsu.client;
+package org.nsu.client.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,13 +6,13 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.function.Consumer;
 
-public class ClientGUI extends JFrame {
+public class ClientView extends JFrame {
 
     private final JTextArea chatArea;
     private final JTextField messageField;
     private final String username;
 
-    public ClientGUI(Consumer<String> messageHandler) {
+    public ClientView(Consumer<String> messageHandler) {
 
         this.username = JOptionPane.showInputDialog("Введите ваше имя:");
 

@@ -2,15 +2,15 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2024-06-02T11:23:46.788121500Z</date>
-  <millis>1717327426788</millis>
-  <nanos>121500</nanos>
+  <date>2024-06-03T03:43:29.664049Z</date>
+  <millis>1717386209664</millis>
+  <nanos>49000</nanos>
   <sequence>0</sequence>
   <logger>org.nsu.server.Server</logger>
   <level>WARNING</level>
   <class>org.nsu.server.Server$ClientHandler$MessageReader</class>
   <method>run</method>
-  <thread>33</thread>
+  <thread>31</thread>
   <message>Socket closed</message>
 </record>
 </log>

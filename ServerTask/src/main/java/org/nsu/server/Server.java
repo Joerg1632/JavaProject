@@ -8,8 +8,6 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -24,7 +22,6 @@ public class Server {
     private static int MAX_HISTORY_SIZE = 100;
 
     public static void main(String[] args) {
-        ExecutorService executor = Executors.newCachedThreadPool();
 
         FileHandler fileHandler = null;
         try {
@@ -37,21 +34,14 @@ public class Server {
         logger.addHandler(fileHandler);
 
         try(ServerSocket serverSocket = new ServerSocket(port)) {
+            while (true) {
 
-            System.out.println("Server started on port " + port);
-
-            while (!Thread.currentThread().isInterrupted()) {
                 Socket socket = serverSocket.accept();
-                System.out.println("Client connected: " + socket);
-
                 ClientHandler clientHandler = new ClientHandler(socket);
                 clientHandler.run();
-
             }
         } catch (IOException e) {
             logger.warning(e.getMessage());
-        } finally {
-            executor.shutdown();
         }
     }
 
@@ -98,7 +88,7 @@ public class Server {
             public void run() {
                 try {
                     while (true) {
-                        Message message = sender.getClientMessage(in, out);
+                        Message message = sender.getClientMessage(in);
 
                         switch (message.commandName) {
                             case "login" -> {
@@ -128,7 +118,6 @@ public class Server {
 
                             }
                             case "logout" -> {
-                                System.out.println("close " + message.session);
                                 addToHistory(sessionMap.get(message.session) + " disconnected");
                                 closeConnection(message.session);
                             }

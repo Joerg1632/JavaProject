@@ -16,15 +16,15 @@ public interface Sender {
 
     void sendMessageToServer(ObjectOutputStream out, String message, String sessionID) throws IOException;
 
-    String getServerMessage(ObjectInputStream in) throws ClassNotFoundException, IOException;
-
-    String tryToConnect(ObjectOutputStream out, ObjectInputStream in, String username) throws IOException, ClassNotFoundException;
-
-    Message getClientMessage(ObjectInputStream in, ObjectOutputStream out) throws IOException, ClassNotFoundException ;
-
     void sendMessage(ObjectOutputStream out, ServerToClientMessage registrationResponse)throws IOException;
 
     void sendChatHistory(ObjectOutputStream out, String sessionID, LinkedList<String> chatHistory)throws IOException;
 
     void sendUserListResponse(ObjectOutputStream objectOutputStream, Map<String, String> sessionMap, String session)throws IOException, ClassNotFoundException;
+
+    String getServerMessage(ObjectInputStream in) throws ClassNotFoundException, IOException;
+
+    String tryToConnect(ObjectOutputStream out, ObjectInputStream in, String username) throws IOException, ClassNotFoundException;
+
+    Message getClientMessage(ObjectInputStream in) throws IOException, ClassNotFoundException ;
 }

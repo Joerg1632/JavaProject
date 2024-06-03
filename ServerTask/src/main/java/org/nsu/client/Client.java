@@ -1,5 +1,6 @@
 package org.nsu.client;
 
+import org.nsu.client.view.ClientView;
 import org.nsu.server.Server;
 import org.nsu.communication.Sender;
 import org.nsu.communication.SerializableSender;
@@ -15,15 +16,15 @@ public class Client {
     private ObjectOutputStream out;
     private ObjectInputStream in;
     private final String username;
-    private String sessionID;
+    private String clientSessionID;
     private static final Logger logger = Logger.getLogger(Server.class.getName());
-    private final ClientGUI clientGUI;
+    private final ClientView clientView;
 
     public Client() {
-        this.clientGUI = new ClientGUI(message -> {
+        this.clientView = new ClientView(message -> {
             if (message.equals("-exit")) {
                 try {
-                    sender.sendLogoutCommand(out, sessionID);
+                    sender.sendLogoutCommand(out, clientSessionID);
                 } catch (IOException e) {
                     logger.warning(e.getMessage());
                 } finally {
@@ -31,20 +32,20 @@ public class Client {
                 }
             } else if (message.equals("-list")) {
                 try {
-                    sender.requestUserList(out, sessionID);
+                    sender.requestUserList(out, clientSessionID);
                 } catch (IOException e) {
                     logger.warning(e.getMessage());
                 }
             } else {
                 try {
-                    sender.sendMessageToServer(out, message, sessionID);
+                    sender.sendMessageToServer(out, message, clientSessionID);
                 } catch (IOException e) {
                     logger.warning(e.getMessage());
                 }
             }
         });
 
-        this.username = clientGUI.getUsername();
+        this.username = clientView.getUsername();
 
         try {
             tryToConnect("localhost", 123);
@@ -57,7 +58,7 @@ public class Client {
                 try {
                     String serverMessage = sender.getServerMessage(in);
                     if (serverMessage != null) {
-                        clientGUI.addMessage(serverMessage);
+                        clientView.addMessage(serverMessage);
                     }
                 } catch (ClassNotFoundException | IOException e) {
                     logger.warning(e.getMessage());
@@ -75,7 +76,7 @@ public class Client {
 
         this.sender = new SerializableSender();
 
-        sessionID = sender.tryToConnect(out, in, username);
+        clientSessionID = sender.tryToConnect(out, in, username);
     }
 
     private void closeConnection() {
@@ -99,4 +100,3 @@ public class Client {
         new Client();
     }
 }
-
